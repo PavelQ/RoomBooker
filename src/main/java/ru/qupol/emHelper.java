@@ -11,8 +11,6 @@ import javax.persistence.EntityManagerFactory;
 public class emHelper {
     public static EntityManager getEm(){
         //Set up Spring context
-        //Here's an example of configuring annotation-driven spring context
-        //please verify it
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(MyConfig.class);
         context.refresh();
@@ -23,9 +21,5 @@ public class emHelper {
         EntityManager em = emf.createEntityManager();
         return em;
     }
-/*    public static String find(int value){
 
-        UserInfo user1=getEm().find(UserInfo.class, BigInteger.valueOf(value));
-        return user1.toString();
-    }  */
 }

@@ -30,12 +30,9 @@ public class MyConfig {
         //driver - depends on database type
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         //url - depends on database location
-        //dataSource.setUrl("jdbc:mysql://localhost:3306/test");
         dataSource.setUrl("jdbc:mysql://localhost:3306/RoomAuth");
         //auth properies
 
-//        dataSource.setUsername("EGOR");
-//        dataSource.setPassword("EgOrMiPt");
         dataSource.setUsername("root");
         //some flag
         dataSource.setSuppressClose(true);
@@ -64,7 +61,6 @@ public class MyConfig {
         //set persistence provider class
         entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
         //set package to scan for jpa entities
-       // entityManagerFactoryBean.setPackagesToScan("org.egzi.model");
         entityManagerFactoryBean.setPackagesToScan("ru.qupol.model");
 
 
